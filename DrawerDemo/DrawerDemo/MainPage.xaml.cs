@@ -21,7 +21,7 @@ namespace DrawerDemo
         uint duration = 100;
         double openY = (Device.RuntimePlatform == "Android") ? 20 : 60;
         double lastPanY = 0;
-        double limitAction = 50;
+        double limitAction = 30;
 
         private async void SwitchBottomDrawer_Clicked(object sender, EventArgs e)
         {
@@ -56,11 +56,12 @@ namespace DrawerDemo
                     //margin = BottomDrawer.Margin;
                     break;
                 case GestureStatus.Running:
-                    if (e.TotalY < 30) return; //avoid move without significative panning
+                    //if (e.TotalY < 20) return; //avoid move without significative panning
                     lastPanY = e.TotalY;
                     if (e.TotalY > 0)
                     {
-                        BottomDrawer.TranslationY = openY + e.TotalY;
+                        //BottomDrawer.TranslationY = openY + e.TotalY;
+                        await BottomDrawer.TranslateTo(0, e.TotalY);
                         if (e.TotalY > limitAction) await CloseDrawer();
                     }
                         //await BottomDrawer.TranslateTo(0, e.TotalY);
