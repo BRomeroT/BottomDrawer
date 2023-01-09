@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:DrawerDemo.Behavior"
              x:Class="DrawerDemo.MainPage">
 
     <Grid RowDefinitions="*,*,auto">
@@ -36,7 +37,7 @@
         </SwipeView>-->
 
         <!--ref: https://youtu.be/kd0fuWT2Xyg-->
-        <Frame x:Name="BottomDrawer" BackgroundColor="White" BorderColor="WhiteSmoke" 
+        <!--<Frame x:Name="BottomDrawer" BackgroundColor="White" BorderColor="WhiteSmoke" 
                CornerRadius="20" HeightRequest="200" Padding="15,6"
                VerticalOptions="End" Grid.RowSpan="2"
                TranslationY="200">
@@ -69,6 +70,40 @@
                 </TableView>
             </StackLayout>
             
+        </Frame>-->
+        <Frame x:Name="BottomDrawer" BackgroundColor="White" BorderColor="WhiteSmoke" 
+               CornerRadius="20" HeightRequest="200" Padding="15,6"
+               VerticalOptions="End" Grid.RowSpan="2"
+               TranslationY="200">
+            <Frame.Behaviors>
+                <behaviors:SwipeDrawerBehavior OpenDrawer="OpenDrawer" CloseDrawer="CloseDrawer" Swiped="Swiped"/>
+            </Frame.Behaviors>
+
+            <Frame.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="TextColor" Value="Black"/>
+                    </Style>
+                </ResourceDictionary>
+            </Frame.Resources>
+
+            <StackLayout>
+                <BoxView CornerRadius="2" HeightRequest="5" BackgroundColor="LightGray" HorizontalOptions="Center">
+                    <BoxView.GestureRecognizers>
+                        <ClickGestureRecognizer Clicked="SwitchBottomDrawer_Clicked"/>
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <Label Text="Bottom Drawer" FontSize="Subtitle" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label x:Name="StatusDrawer" FontSize="Micro"/>
+
+                <TableView Intent="Settings">
+                    <TableSection>
+                        <TextCell Text="Acction 1"/>
+                        <TextCell Text="Acction 2"/>
+                    </TableSection>
+                </TableView>
+            </StackLayout>
+
         </Frame>
     </Grid>
 </ContentPage>
