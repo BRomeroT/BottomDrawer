@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BottomDrawer", "BottomDrawer\BottomDrawer.csproj", "{DACC39F4-7A46-4A4D-93BB-E57A04276E6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DACC39F4-7A46-4A4D-93BB-E57A04276E6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DACC39F4-7A46-4A4D-93BB-E57A04276E6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DACC39F4-7A46-4A4D-93BB-E57A04276E6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DACC39F4-7A46-4A4D-93BB-E57A04276E6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF501FB5-DC7D-4B16-A2E8-727865B65A09}
+	EndGlobalSection
+EndGlobal
