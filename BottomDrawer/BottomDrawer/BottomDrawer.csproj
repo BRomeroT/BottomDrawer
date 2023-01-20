@@ -2,6 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>10.0</LangVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Bottom Drawer</Title>
+    <Version>$(AssemblyVersion)</Version>
+    <Authors>Benjamin Romero Tanus; Miguel Angel Vazquez Lazaro; Luis Angel López Rodríguez; Ricardo Josue Perez Altamirano; galadril</Authors>
+    <Company>Sysne Automatizacion De Mexico S.A de C.V.</Company>
+    <Description>Adaptacion de control Button Drawer para aplicaciones con Xamarin Forms</Description>
+    <PackageTags>Button Drawer;Button Drawer xamarin; Button;Drawer</PackageTags>
+    <PackageReleaseNotes>Despliegue inicial</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
