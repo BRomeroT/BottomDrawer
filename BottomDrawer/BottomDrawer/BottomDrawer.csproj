@@ -14,6 +14,7 @@
     <Description>Adaptacion de control Button Drawer para aplicaciones con Xamarin Forms</Description>
     <PackageTags>Button Drawer;Button Drawer xamarin; Button;Drawer</PackageTags>
     <PackageReleaseNotes>Despliegue inicial</PackageReleaseNotes>
+    <PackageId>Sysne.BottomDrawer</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
